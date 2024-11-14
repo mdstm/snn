@@ -157,7 +157,7 @@ def main():
   def text():
     with open('spaic2mlir.mlir', 'r') as f:
       return f.read()
-  
+
   @test('解析 mlir ')
   def net_op():
     return Parser(ctx, text).parse_op()
@@ -166,10 +166,10 @@ def main():
   def net_wy():
     return mlir2wuyuan(net_op)
 
-  @test('转换 wuyuan -> mlir')
+  @test('转换 wuyuan -> mlir ')
   def net_op_():
     return wuyuan2mlir(net_op.sym, net_wy)
-  
+
   @test('打印 mlir')
   def _():
     with open('wuyuan2mlir.mlir', 'w') as f:

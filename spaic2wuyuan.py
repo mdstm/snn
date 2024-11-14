@@ -76,7 +76,7 @@ def main():
   def _():
     quantize_net(net)
 
-  @test('转换 spaic -> wuyuan')
+  @test('转换 spaic -> wuyuan ')
   def net_wy():
     return spaic2wuyuan(net)
 
