@@ -14,11 +14,17 @@ class TinyModel(spaic.Network):
                                  syn_type=['flatten', 'basic'])
     self.con2 = spaic.Connection(pre=self.neg1, post=self.neg2, link_type='one_to_one', w_mean=0.5)
     self.dec0 = spaic.Decoder(dec_target=self.neg2, num=5, coding_method='spike_counts')
-    self.dec1 = spaic.Decoder(dec_target=self.neg2, num=5, coding_method='spike_counts',
+    self.dec1 = spaic.Decoder(dec_target=self.neg0, num=9, coding_method='spike_counts',
                               coding_var_name='Isyn')
     self.mon0 = spaic.StateMonitor(target=self.neg0, var_name='O')
-    self.mon1 = spaic.StateMonitor(target=self.neg1, var_name='V', index=((1, 2, 3),))
-    self.mon2 = spaic.StateMonitor(target=self.con1, var_name='weight', index=((0, 0, 0), (0, 1, 2)))
+    self.mon1 = spaic.StateMonitor(target=self.neg0, var_name='V',
+                                   index=((0, 0, 0, 0), (0, 1, 1, 2), (1, 0, 2, 1)))
+    self.mon2 = spaic.StateMonitor(target=self.con0, var_name='weight',
+                                   index=((0, 0), (0, 2), (0, 1), (0, 2)))
+    self.mon3 = spaic.StateMonitor(target=self.con1, var_name='weight',
+                                   index=((0, 1, 2), (2, 3, 7)))
+    self.mon4 = spaic.StateMonitor(target=self.con2, var_name='weight',
+                                   index=((0, 1, 2, 3, 4), (0, 1, 2, 3, 4)))
 
     b = spaic.Torch_Backend()
     b.dt = 1

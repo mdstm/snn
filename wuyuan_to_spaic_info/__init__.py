@@ -28,7 +28,7 @@ def get_infos(net_wy: wym.Network) -> dict:
   for name, a in net_wy._SpikeDecoderStatefulElementMap__spike_decoder_id_to_element.items():
     infos[name] = get_dec_info(a)
 
-  for name, a in net_wy._StateDecoderSynapseStatefulElementMap__state_decoder_synapse_id_to_element.items():
+  for name, a in net_wy._StateDecoderNeuronStatefulElementMap__state_decoder_neuron_id_to_element.items():
     infos[name] = get_dec_info(a)
 
   # 解析监视器

@@ -19,6 +19,7 @@ def get_mon_info(a: wym.Monitor) -> dict:
 
   position = a.get_position()
   if isinstance(a, wym.SpikeMonitor):
+    param['var_name'] = 'O'
     param['index'] = (
       tuple(position.T) if position.dtype != bool else
       'full' if np.all(position) else
