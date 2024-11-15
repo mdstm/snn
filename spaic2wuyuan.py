@@ -80,6 +80,8 @@ def main():
   def net_wy():
     return spaic2wuyuan(net)
 
+  return net_wy
+
 
 if __name__ == '__main__':
   main()

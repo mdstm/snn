@@ -11,6 +11,7 @@ from .connection_group import ConnectionGroup
 from .spike_decoder import SpikeDecoder
 from .state_decoder_neuron import StateDecoderNeuron
 from .state_decoder_synapse import StateDecoderSynapse
+from .monitor import Monitor
 from .spike_monitor import SpikeMonitor
 from .state_monitor_neuron import StateMonitorNeuron
 from .state_monitor_synapse import StateMonitorSynapse

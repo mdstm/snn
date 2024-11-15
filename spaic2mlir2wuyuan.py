@@ -22,6 +22,8 @@ def main():
   def net_wy():
     return mlir2wuyuan(net_op)
 
+  return net_wy
+
 
 if __name__ == '__main__':
   main()

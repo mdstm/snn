@@ -878,6 +878,8 @@ def main():
 
   print(str(net_op) == str(net_op_))
 
+  return net_op
+
 
 if __name__ == '__main__':
   main()
