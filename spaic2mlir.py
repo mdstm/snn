@@ -96,7 +96,7 @@ def main():
       p.print_op(net_op)
       p.print_string('\n')
 
-  return net_op
+  return net, net_op
 
 
 if __name__ == '__main__':

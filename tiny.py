@@ -16,7 +16,7 @@ class TinyModel(spaic.Network):
     self.dec0 = spaic.Decoder(dec_target=self.neg2, num=5, coding_method='spike_counts')
     self.dec1 = spaic.Decoder(dec_target=self.neg0, num=9, coding_method='spike_counts',
                               coding_var_name='Isyn')
-    self.mon0 = spaic.StateMonitor(target=self.neg0, var_name='O')
+    self.mon0 = spaic.StateMonitor(target=self.neg2, var_name='O')
     self.mon1 = spaic.StateMonitor(target=self.neg0, var_name='V',
                                    index=((0, 0, 0, 0), (0, 1, 1, 2), (1, 0, 2, 1)))
     self.mon2 = spaic.StateMonitor(target=self.con0, var_name='weight',

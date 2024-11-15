@@ -177,7 +177,7 @@ def main():
       p.print_op(net_op_)
       p.print_string('\n')
 
-  return net_op_
+  return net_op, net_wy, net_op_
 
 
 if __name__ == '__main__':

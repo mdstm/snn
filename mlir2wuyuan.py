@@ -104,7 +104,7 @@ def main():
   def net_wy():
     return mlir2wuyuan(net_op)
 
-  return net_wy
+  return net_op, net_wy
 
 
 if __name__ == '__main__':
