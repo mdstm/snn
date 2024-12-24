@@ -116,7 +116,6 @@ class CLIFModel(Extracter):
 
     def get_info(a: spaic.NeuronGroup) -> dict:
         tau_variables = a.model._tau_variables
-        shape = a.shape
         return {
             'model_type': 'CLIF',
             'model_param': {
